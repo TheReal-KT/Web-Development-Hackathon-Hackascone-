@@ -1,0 +1,139 @@
+/* General Styles */
+body {
+    font-family: Arial, serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+.headers {
+    display: flex;
+    justify-content: space-between; /* Spread items between the left and right sides */
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.nameOfClub {
+    font-size: 30px;
+    margin-left: 10px; /* Adjust space between logo and text */
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+.header_buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header_buttons a {
+    font-family: Arial, serif;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 60px;
+    height: 60px;
+    width: 150px;
+    font-size: 1rem;
+    transition: 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header_buttons a:hover {
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2);
+    background-color: #71797E;
+}
+
+/* Contact Sections */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.contact-info, .contact-form {
+    background-color: black;
+    color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-info:hover, .contact-form:hover {
+    transform: scale(1.1);
+}
+
+/* Form Styles */
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+button {
+    font-family: Arial, serif;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 60px;
+    height: 50px;
+    width: 150px;
+    font-size: 1rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2);
+    background-color: #71797E;
+}
+
+/* Social Media Icons */
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-icon {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
