@@ -23,7 +23,7 @@ h3{
     margin-left: 30px;
     white-space: nowrap;
 }
-
+/* Buttons */
 /* Common button styles for all buttons */
 .header_buttons a {
     color: white;
@@ -59,6 +59,7 @@ h3{
     gap: 10px; /* Adds spacing between buttons */
 }
 
+/* Content Section */
 /* Black Content Box */
 .about_content-box {
     background-color: black;
@@ -117,7 +118,7 @@ h3{
     transform: scale(1.2); /* Slight zoom on hover */
 }
 
-/* The Youtube Video for Resources */
+/* The Youtube Video */
 .video-container {
     display: flex;
     justify-content: center;
