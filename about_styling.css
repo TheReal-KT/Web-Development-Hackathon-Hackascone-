@@ -1,0 +1,158 @@
+p{
+    font-family: Arial, serif;
+}
+h1{
+    font-family: Arial, serif;
+}
+
+h2{
+    font-family: Arial, serif;
+}
+
+h3{
+    font-family: Arial, serif;
+}
+
+.headers{
+    display: flex;
+    align-items: center;
+
+}
+.nameOfClub{
+    font-size: 30px;
+    margin-left: 30px;
+    white-space: nowrap;
+}
+
+/* Common button styles for all buttons */
+.header_buttons a {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 60px;
+    height: 60px;
+    width: 150px;
+    font-size: 1rem;
+    transition: 0.2s;
+    cursor: pointer;
+
+    /* Center text inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Removes default link styling */
+    text-decoration: none;
+}
+
+.header_buttons a:hover {
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.2);
+    background-color: #71797E;
+}
+
+/* Button container styling */
+.header_buttons {
+    position: absolute; /* Keeps buttons fixed on screen */
+    top: 20px; /* Adjust the vertical position */
+    right: 20px; /* Aligns buttons to the right */
+    display: flex; /* Aligns buttons side by side */
+    gap: 10px; /* Adds spacing between buttons */
+}
+
+/* Black Content Box */
+.about_content-box {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.about_content-box a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Content - Who Are We?, Our Mission, Activities */
+.content_in_box1 {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.content1 {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content1:hover{
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* Projects and Resources */
+.content_in_box2 {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.content2 {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content2:hover{
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* The Youtube Video for Resources */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-color: black;
+}
+iframe {
+    width: 560px;
+    height: 315px;
+    border: none;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #f8f8f8; /* Light background */
+    margin-top: 50px; /* Pushes it towards the bottom */
+}
+
+/*Socials section*/
+.social-media-buttons {
+    display: flex; /* Aligns icons side by side */
+    gap: 15px; /* Adds spacing between icons */
+    justify-content: center; /* Centers icons */
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 50px; /* Adjust size */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
