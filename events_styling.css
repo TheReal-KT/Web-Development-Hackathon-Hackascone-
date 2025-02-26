@@ -26,6 +26,7 @@ h3{
 
 /* Common button styles for all buttons */
 .header_buttons a {
+    font-family: Arial, serif;
     color: white;
     background-color: black;
     border: none;
