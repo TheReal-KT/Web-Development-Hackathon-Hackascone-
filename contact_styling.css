@@ -1,5 +1,8 @@
 /* General Styles */
 body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     font-family: Arial, serif;
     background-color: black;
     color: white;
@@ -12,6 +15,43 @@ body {
     justify-content: space-between; /* Spread items between the left and right sides */
     align-items: center;
     padding: 20px;
+    background-color: white;
+}
+.contact-content-box {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.contact-content-box::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 500%;
+    background: linear-gradient(
+        45deg,
+        #2196F3,    /* Sky blue */
+        #000000,    /* Black */
+        #13a9e4,    /* Light sky blue */
+        #000000     /* Black */
+    );
+    z-index: -1;
+    animation: aurora 15s linear infinite;
+    opacity: 0.5;
+}
+@keyframes aurora {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .logo-section {
@@ -24,6 +64,23 @@ body {
     margin-left: 10px; /* Adjust space between logo and text */
     white-space: nowrap;
     font-weight: bold;
+    color:#000000
+}
+.start_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: white;
+    text-decoration: none;
+    width: 60px !important;  /* Override the default width */
+    height: 60px !important; /* Keep the same height for alignment */
+    font-size: 24px !important; /* Adjust the arrow size */
+}
+
+.start_button:hover {
+    color: #87CEEB; 
+    transform: scale(1.1); 
 }
 
 .logo {
@@ -131,9 +188,13 @@ button:hover {
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    color: white;
-    padding: 20px;
+    color: black;
+    padding: 26px;
     position: fixed;
     bottom: 0;
+    left: 0;  /* Add this to ensure left alignment */
+    right: 0; /* Add this to ensure right alignment */
     width: 100%;
+    margin: 0;  /* Remove any margin */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
