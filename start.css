@@ -1,0 +1,116 @@
+.start-page {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    transition: opacity 1s ease-in-out;
+    gap: 20px;
+    overflow: hidden;  /* Add this to contain the aurora */
+    z-index: 1;
+}
+.start-page::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: linear-gradient(
+        45deg,
+        #2196F3,    /* Sky blue */
+        #000000,    /* Black */
+        #1fa8df,    /* Light sky blue */
+        #000000     /* Black */
+    );
+    z-index: -1;
+    animation: aurora 15s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes aurora {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Ensure all content stays above the aurora */
+.start-page > * {
+    position: relative;
+    z-index: 2;
+}
+
+img {
+    width: 150px;  /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.welcome-heading {
+    margin: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 2.5em;
+}
+
+h3 {
+    margin: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #2196F3, #1976D2);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+    transition: all 0.3s ease;
+}
+.switch:hover {
+    scale: 1.15;
+}
+
+/* ...existing code... */
+#checkbox {
+    display: none;
+}
+
+.slider {
+    fill: #fff;
+    transition: transform 0.3s ease;
+}
+
+#checkbox:checked + label .slider {
+    animation: spin 1s linear;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
