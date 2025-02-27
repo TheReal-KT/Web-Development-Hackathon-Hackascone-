@@ -23,6 +23,22 @@ h3{
     margin-left: 30px;
     white-space: nowrap;
 }
+.start_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: white;
+    text-decoration: none;
+    width: 60px !important;  /* Override the default width */
+    height: 60px !important; /* Keep the same height for alignment */
+    font-size: 24px !important; /* Adjust the arrow size */
+}
+
+.start_button:hover {
+    color: #87CEEB; 
+    transform: scale(1.1); 
+}
 /* Buttons */
 /* Common button styles for all buttons */
 .header_buttons a {
@@ -63,11 +79,49 @@ h3{
 /* Content Section */
 /* Black Content Box */
 .about_content-box {
-    background-color: black;
+    position: relative;
+    background: black;
     color: white;
     text-align: center;
     padding: 50px;
     border-radius: 20px;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+
+.about_content-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        #2196F3,    /* Sky blue */
+        #000000,    /* Black */
+        #13a9e4,    /* Light sky blue */
+        #000000     /* Black */
+    );
+    z-index: -1;
+    animation: aurora 15s linear infinite;
+    opacity: 0.5;
+}
+@keyframes aurora {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Add this to ensure content remains visible */
+.about_content-box * {
+    position: relative;
+    z-index: 2;
 }
 
 .about_content-box a {
