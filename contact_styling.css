@@ -138,14 +138,16 @@ body {
     transform: scale(1.1);
 }
 
-/* Form Styles */
+/* Form Elements */
 input, textarea {
     width: 90%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 8px 0;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid #2196F3;
+    background: rgba(255, 255, 255, 0.9);
 }
+
 
 button {
     font-family: Arial, serif;
@@ -170,11 +172,10 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 30px;
 }
 
 .social-icon {
-    width: 50px;
+    width: 25px;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -188,14 +189,11 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    padding: 26px;
-    position: absolute;
+    background-color: white;
+    padding: 10px;
+    position: fixed;
     bottom: 0;
-    left: 0;  /* Add this to ensure left alignment */
-    right: 0; /* Add this to ensure right alignment */
-    width: 100%;
-    margin: 0;  /* Remove any margin */
-    box-sizing: border-box; /* Include padding in width calculation */
+    left: 0;
+    right: 0;
+    height: 40px;
 }
