@@ -197,3 +197,94 @@ button:hover {
     right: 0;
     height: 40px;
 }
+
+/* Phone Design Break Point */
+/* So Any Devices under 600px, these CSS changes apply */
+@media (max-width: 600px) {
+
+    h1{
+        font-size: 170% ;
+    }
+
+    h3{
+        font-size: 100%;
+    }
+
+    .headers{
+        display: flex;
+        align-items: center;
+        height: 40px;
+
+    }
+    .nameOfClub{
+        font-size: clamp(15px, 4vw, 18px);
+        margin-left: 30px;
+        white-space: nowrap;
+    }
+
+    .start_button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        color: white;
+        text-decoration: none;
+        width: 30px !important;  /* Override the default width */
+        height: 30px !important; /* Keep the same height for alignment */
+        font-size: 15px !important; /* Adjust the arrow size */
+    }
+
+    /* Button */
+    /* Common button styles for all buttons */
+    .header_buttons a {
+        font-family: Arial, serif;
+        color: white;
+        background-color: black;
+        border: none;
+        border-radius: 60px;
+        height: 30px;
+        width: clamp(35px,40px,50px);
+        font-size: 0.5em;
+        transition: 0.2s;
+        cursor: pointer;
+
+        /* Center text inside */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* Removes default link styling */
+        text-decoration: none;
+    }
+
+
+    .container{
+        gap: 50px;
+        flex-direction: column; /* Stacks elements vertically */
+        align-items: center; /* Centers content */
+    }
+
+    .contact-info{
+        width: 280px;
+        padding: 30px;
+    }
+
+    .contact-form {
+        width: 280px;
+        padding: 30px;
+    }
+
+    /* Footer */
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+    }
+}

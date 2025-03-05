@@ -114,3 +114,22 @@ h3 {
         transform: rotate(360deg);
     }
 }
+
+/* Phone Design Break Point */
+/* So Any Devices under 600px, these CSS changes apply */
+@media (max-width: 600px) {
+    html, body {
+        overflow: hidden; /* Disables Scrolling so the page don't scroll forever on mobile */
+    }
+
+    .welcome-heading {
+        margin: 0;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 1.8em; /* Edited size of text */
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
