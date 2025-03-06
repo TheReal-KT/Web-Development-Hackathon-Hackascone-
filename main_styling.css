@@ -53,8 +53,8 @@ h3{
 }
 
 .start_button:hover {
-    color: #87CEEB; 
-    transform: scale(1.1); 
+    color: #87CEEB;
+    transform: scale(1.1);
 }
 /* Button */
 /* Common button styles for all buttons */
@@ -106,6 +106,7 @@ h3{
     z-index: 1;
 }
 
+/* Replace the existing aurora animation code starting at line 121 */
 .home_content-box::before {
     content: '';
     position: absolute;
@@ -114,17 +115,51 @@ h3{
     width: 200%;
     height: 200%;
     background: linear-gradient(
-        45deg,
-        #2196F3,    /* Sky blue */
-        #000000,    /* Black */
-        #13a9e4,    /* Light sky blue */
-        #000000     /* Black */
+            45deg,
+            #2196F3,    /* Sky blue */
+            #000000,    /* Black */
+            #13a9e4,    /* Light sky blue */
+            #000000     /* Black */
     );
     z-index: -1;
     animation: aurora 15s linear infinite;
     opacity: 0.5;
 }
 
+@media (max-width: 600px) {
+    .home_content-box::before {
+        content: '';
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 1100%;
+        height: 300%;
+        animation: aurora 10s linear infinite;
+        opacity: 0.3;
+    }
+
+    @keyframes aurora {
+        0% {
+            transform: rotate(0deg) scale(0.95);
+        }
+        100% {
+            transform: rotate(360deg) scale(1.05);
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .home_content-box::before {
+        top: -100%;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+        animation: aurora 22s linear infinite;
+        opacity: 0.35;
+    }
+}
+
+/* Keep the main aurora keyframes for desktop */
 @keyframes aurora {
     0% {
         transform: rotate(0deg);
@@ -264,7 +299,7 @@ h3{
 
     }
     .nameOfClub{
-        font-size: clamp(15px, 4vw, 18px); /**/
+        font-size: clamp(15px, 4vw, 18px);
         margin-left: 30px;
         white-space: nowrap;
     }
@@ -278,7 +313,7 @@ h3{
         text-decoration: none;
         width: 30px !important;  /* Override the default width */
         height: 30px !important; /* Keep the same height for alignment */
-        font-size: 15px !important; /* Adjust the arrow size */ /**/
+        font-size: 15px !important; /* Adjust the arrow size */
     }
 
     /* Button */
@@ -290,7 +325,7 @@ h3{
         border: none;
         border-radius: 60px;
         height: 30px;
-        width: clamp(35px,40px,50px);/**/
+        width: clamp(35px,40px,50px);
         font-size: 0.5em;
         transition: 0.2s;
         cursor: pointer;
@@ -343,4 +378,3 @@ h3{
     }
 
 }
-

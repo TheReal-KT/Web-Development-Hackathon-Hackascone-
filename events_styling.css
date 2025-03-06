@@ -36,8 +36,8 @@ h3{
 }
 
 .start_button:hover {
-    color: #87CEEB; 
-    transform: scale(1.1); 
+    color: #87CEEB;
+    transform: scale(1.1);
 }
 /* Common button styles for all buttons */
 .header_buttons a {
@@ -95,15 +95,36 @@ h3{
     width: 300%;
     height: 300%;
     background: linear-gradient(
-        45deg,
-        #2196F3,    /* Sky blue */
-        #000000,    /* Black */
-        #13a9e4,    /* Light sky blue */
-        #000000     /* Black */
+            45deg,
+            #2196F3,    /* Sky blue */
+            #000000,    /* Black */
+            #13a9e4,    /* Light sky blue */
+            #000000     /* Black */
     );
     z-index: -1;
     animation: aurora 15s linear infinite;
     opacity: 0.5;
+}
+@media (max-width: 600px) {
+    .events_content-box::before {
+        content: '';
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 1100%;
+        height: 300%;
+        animation: aurora 10s linear infinite;
+        opacity: 0.3;
+    }
+
+    @keyframes aurora {
+        0% {
+            transform: rotate(0deg) scale(0.95);
+        }
+        100% {
+            transform: rotate(360deg) scale(1.05);
+        }
+    }
 }
 
 @keyframes aurora {
